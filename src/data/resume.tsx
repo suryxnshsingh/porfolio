@@ -7,10 +7,9 @@ export const DATA = {
   url: "https://suryxnshsingh.me",
   location: "Indore, India",
   locationLink: "https://www.google.com/maps/place/indore",
-  description:
-    "Full Stack Engineer and CS Student. I love building scalable applications and exploring new technologies.",
+  description: "Fullstack developer with an eye for design, building scalable webapps and crafting seamless user experiences.",
   summary:
-    "I'm a passionate Full Stack Engineer currently pursuing BE in Electronics and Instrumentation Engineering. I have hands-on experience with modern web technologies and have worked remotely with a US-based fintech company. I enjoy building scalable applications, from departmental ERP systems to real-time video conferencing platforms. Always eager to learn and contribute to innovative projects.",
+    "Full Stack Engineer and CS Student currently pursuing BE in Electronics and Instrumentation Engineering. I have hands-on experience with modern web technologies and have worked remotely with a US-based fintech company. I enjoy building scalable applications, from departmental ERP systems to real-time video conferencing platforms. Always eager to learn and contribute to innovative projects.",
   avatarUrl: "/me.png",
   skills: [
     "JavaScript",
@@ -130,7 +129,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/lms.mp4",
     },
     {
       title: "OcuLink",
@@ -187,7 +186,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/eventsy.png",
       video: "",
     },
   ],
