@@ -56,11 +56,25 @@ export default function Page() {
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 7 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+            {DATA.skills.map((skill, id) => {
+              // Main skills to show on mobile
+              const mainSkills = [
+                "JavaScript", "TypeScript", "Python", "Next.js", "React.js", 
+                "Node.js", "FastAPI" , "PostgreSQL", "MongoDB", "AWS", "Docker"
+              ];
+              const isMainSkill = mainSkills.includes(skill);
+              
+              return (
+                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 7 + id * 0.05}>
+                  <Badge 
+                    key={skill} 
+                    className={isMainSkill ? "" : "hidden sm:inline-flex"}
+                  >
+                    {skill}
+                  </Badge>
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
