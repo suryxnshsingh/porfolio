@@ -5,7 +5,9 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { Download, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -29,16 +31,32 @@ export default function Page() {
               text={DATA.description}
             />
           </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild className="flex items-center gap-2">
+                <a href="/resume.pdf" download>
+                  <Download className="size-4" />
+                  Download Resume
+                </a>
+              </Button>
+              <Button variant="outline" asChild className="flex items-center gap-2">
+                <Link href={DATA.contact.social.LinkedIn.url} target="_blank">
+                  <ExternalLink className="size-4" />
+                  Let's Connect
+                </Link>
+              </Button>
+            </div>
+          </BlurFade>
         </div>
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 7 + id * 0.05}>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
@@ -47,13 +65,13 @@ export default function Page() {
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
               key={work.company}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+              delay={BLUR_FADE_DELAY * 9 + id * 0.05}
             >
               <ResumeCard
                 key={work.company}
@@ -72,14 +90,14 @@ export default function Page() {
       </section>
       <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <h2 className="text-xl font-bold">Projects</h2>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 11 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
