@@ -100,7 +100,17 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              {description.includes('•') ? (
+                <ul className="list-disc list-inside space-y-1">
+                  {description.split('\n\n').map((item, index) => (
+                    <li key={index} className="text-xs sm:text-sm">
+                      {item.replace('• ', '')}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                description
+              )}
             </motion.div>
           )}
         </div>

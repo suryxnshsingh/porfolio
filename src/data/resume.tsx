@@ -39,7 +39,6 @@ export const DATA = {
     "Cloudflare Workers",
     "Docker",
     "Git",
-    "GitHub",
     "Postman",
     "Firebase",
     "Supabase",
@@ -88,20 +87,10 @@ export const DATA = {
       location: "Remote (Pennsylvania, USA)",
       title: "Full Stack Engineer Intern",
       logoUrl: "/invsto.jpg",
-      start: "Nov 2024",
+      start: "Dec 2024",
       end: "Present",
       description:
-        "Designed, built, and deployed the company's portfolio website with immersive, responsive design. Developed core frontend modules for SharkSigma (trading platform) using Next.js, TypeScript, and a Python-based strategy editor. Refactored backend OMS with FastAPI + RabbitMQ; scaled throughput from 200 → 1000+ orders/min. Implemented microservices with aio-pika, PostgreSQL, Redis; used circuit breakers, 2PC, and TLS. Set up CI/CD pipelines using GitHub Actions for testing, deployment, and orchestration.",
-    },
-  ],
-  education: [
-    {
-      school: "Shri G.S. Institute of Technology and Science",
-      href: "https://sgsits.ac.in",
-      degree: "BE in Electronics and Instrumentation Engineering",
-      logoUrl: "/sgsits.png",
-      start: "2023",
-      end: "2027",
+        "• Developed and maintained core frontend modules for SharkSigma (a trading platform) using Next.js, TypeScript, and a modular design system to ensure UI consistency and scalability.\n\n• Took ownership of multiple backend services; refactored workflows using FastAPI, RabbitMQ, and multithreading to boost system throughput from ~200 → 1000+ orders/min.\n\n• Integrated aio-pika, Redis, and PostgreSQL into a microservice-based architecture with circuit breakers, two-phase commits, and TLS to ensure reliability and security.\n\n• Built and deployed the company's portfolio website with an immersive, responsive UI, focusing on performance and SEO.\n\n• Automated deployment pipelines via GitHub Actions for building Docker images and publishing to AWS ECR, followed by EC2-based deployment scripts and NGINX reverse proxy setups with SSL termination.\n\n• Implemented zero-downtime rollouts using load balancer config and service orchestration logic.\n\n• Collaborated closely with core team across engineering, product, and ops to design scalable features and improve system resilience end-to-end.",
     },
   ],
   projects: [
