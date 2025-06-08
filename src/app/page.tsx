@@ -42,7 +42,7 @@ export default function Page() {
               <Button variant="outline" asChild className="flex items-center gap-2">
                 <Link href={DATA.contact.social.LinkedIn.url} target="_blank">
                   <ExternalLink className="size-4" />
-                  Let's Connect
+                  Let&apos;s Connect
                 </Link>
               </Button>
             </div>
