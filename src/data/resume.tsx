@@ -46,7 +46,6 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "suryxnshsingh@gmail.com",
@@ -115,6 +114,10 @@ export const DATA = {
           type: "Website",
           href: "https://eilms-secret.vercel.app",
           icon: <Icons.globe className="size-3" />,
+        },{
+          type: "Source",
+          href: "https://github.com/suryxnshsingh/EI-LMS",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
@@ -146,7 +149,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/oculink.png",
       video: "",
     },
     {
