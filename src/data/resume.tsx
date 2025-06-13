@@ -86,7 +86,7 @@ export const DATA = {
       location: "Remote (Pennsylvania, USA)",
       title: "Full Stack Engineer Intern",
       logoUrl: "/invsto.jpg",
-      start: "Dec 2024",
+      start: "Nov 2024",
       end: "Present",
       description:
         "• Developed and maintained core frontend modules for SharkSigma (a trading platform) using Next.js, TypeScript, and a modular design system to ensure UI consistency and scalability.\n\n• Took ownership of multiple backend services; refactored workflows using FastAPI, RabbitMQ, and multithreading to boost system throughput from ~200 → 1000+ orders/min.\n\n• Integrated aio-pika, Redis, and PostgreSQL into a microservice-based architecture with circuit breakers, two-phase commits, and TLS to ensure reliability and security.\n\n• Built and deployed the company's portfolio website with an immersive, responsive UI, focusing on performance and SEO.\n\n• Automated deployment pipelines via GitHub Actions for building Docker images and publishing to AWS ECR, followed by EC2-based deployment scripts and NGINX reverse proxy setups with SSL termination.\n\n• Implemented zero-downtime rollouts using load balancer config and service orchestration logic.\n\n• Collaborated closely with core team across engineering, product, and ops to design scalable features and improve system resilience end-to-end.",
@@ -150,35 +150,6 @@ export const DATA = {
         },
       ],
       image: "/oculink.png",
-      video: "",
-    },
-    {
-      title: "Eventsy",
-      href: "https://eventsy-suryansh.vercel.app",
-      dates: "2024",
-      active: true,
-      description:
-        "Event management app with CRUD and RSVP functionality built using the MERN stack.",
-      technologies: [
-        "MongoDB",
-        "Express.js",
-        "React.js",
-        "Node.js",
-        "TailwindCSS",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://eventsy-suryansh.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/suryxnshsingh/Eventsy",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/eventsy.png",
       video: "",
     },
   ],

@@ -3,6 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { Footer } from "@/components/footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -23,8 +24,7 @@ export default function Page() {
               delay={BLUR_FADE_DELAY}
               className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
               yOffset={8}
-              // eslint-disable-next-line react/no-unescaped-entities
-              text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+              text="Suryansh Singh"
             />
             <BlurFadeText
               className="max-w-[600px] md:text-xl"
@@ -41,7 +41,7 @@ export default function Page() {
                 </a>
               </Button>
               <Button variant="outline" asChild className="flex items-center gap-2">
-                <Link href={DATA.contact.social.LinkedIn.url} target="_blank">
+                <Link href={`mailto:${DATA.contact.email}`}>
                   <ExternalLink className="size-4" />
                   Let&apos;s Connect
                 </Link>
@@ -50,7 +50,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="skills">
+      {/* <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <h2 className="text-xl font-bold">Skills</h2>
@@ -77,7 +77,7 @@ export default function Page() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
@@ -130,37 +130,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Feel free to reach out via{" "}
-                <Link
-                  href={DATA.contact.social.LinkedIn.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  LinkedIn
-                </Link>{" "}
-                or{" "}
-                <Link
-                  href={`mailto:${DATA.contact.email}`}
-                  className="text-blue-500 hover:underline"
-                >
-                  email
-                </Link>
-                . I&apos;m always excited to discuss new opportunities and collaborate on interesting projects.
-              </p>
-            </div>
-          </BlurFade>
-        </div>
-      </section>
+      <Footer delay={BLUR_FADE_DELAY * 13} />
     </main>
   );
 }
