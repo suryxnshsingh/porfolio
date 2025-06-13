@@ -108,25 +108,30 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <h2 className="text-xl font-bold">Projects</h2>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 11 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
+          <div className="grid grid-cols-1 gap-8 max-w-[1200px] mx-auto">
+            {DATA.projects.map((project, id) => {
+              // Find GitHub and Website links
+              const githubLink = project.links?.find(link => link.type === "Source");
+              const websiteLink = project.links?.find(link => link.type === "Website");
+              
+              return (
+                <BlurFade
                   key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
+                  delay={BLUR_FADE_DELAY * 11 + id * 0.05}
+                >
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    technologies={Array.from(project.technologies)}
+                    imageUrl={project.image || "/placeholder.svg"}
+                    videoUrl={project.video}
+                    githubUrl={githubLink?.href || "#"}
+                    liveUrl={websiteLink?.href || project.href || "#"}
+                    index={id}
+                  />
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
