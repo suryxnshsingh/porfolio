@@ -35,9 +35,9 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="flex items-center gap-2">
-                <a href="/resume.pdf" download>
+                <a href="https://drive.google.com/file/d/1tEOkot5Vtvz5Zn9Ini3Xuh5P0BeeaPN5/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Download className="size-4" />
-                  Download Resume
+                  View Resume
                 </a>
               </Button>
               <Button variant="outline" asChild className="flex items-center gap-2">
